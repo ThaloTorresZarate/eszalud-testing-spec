@@ -8,6 +8,9 @@ public class Especialidad {
     }
 
     public Especialidad(String nombre, String descripcion) {
+        if(nombre==null){
+            throw new IllegalArgumentException("El nombre de la especialidad es requerido");
+        }
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
