@@ -3,8 +3,7 @@ package pe.saludpublica.model;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class EspecialidadTest {
     @Test
@@ -15,6 +14,13 @@ public class EspecialidadTest {
         assertNotNull(e);
         assertEquals("Cardiología", e.getNombre());
         assertEquals("Enfermedades del corazón", e.getDescripcion());
+    }
+
+    @Test
+    @DisplayName("ESP-002: Rechazar especialidad sin nombre")
+    void shouldRejectSpecialtyWithoutName() {
+        assertThrows(IllegalArgumentException.class, () ->
+                new Especialidad(null, "Enfermedades del corazón"));
     }
 
 }
