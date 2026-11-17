@@ -43,4 +43,11 @@ public class PacienteTest {
                 () -> new Paciente("73891245", null, "Flores Chávez", "978123456", "pedro.flores@mail.com"));
     }
 
+    @Test
+    @DisplayName("Rechazar la creación de un paciente sin apellidos")
+    void shouldRejectPatientWithoutLastName() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Paciente("80123456", "Lucía Isabel", null, "956781234", "lucia.vargas@mail.com"));
+    }
+
 }
