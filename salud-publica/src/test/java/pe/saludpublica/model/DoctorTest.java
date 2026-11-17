@@ -27,5 +27,11 @@ public class DoctorTest {
                 new Doctor(null, "Carlos", "Mendoza", "CMP-12345", "esp-001"));
     }
 
+    @Test
+    @DisplayName("DOC-003: Rechazar doctor sin nombres")
+    void shouldRejectDoctorWithoutFirstName() {
+        assertThrows(IllegalArgumentException.class, () ->
+                new Doctor("40123456", null, "Mendoza", "CMP-12345", "esp-001"));
+    }
 
 }
