@@ -53,4 +53,17 @@ public class CitaMedicaTest {
                         null, "Chequeo mensual", "PROGRAMADA"));
     }
 
+    @Test
+    @DisplayName("Estado null asigna PROGRAMADA por defecto")
+    void shouldDefaultToScheduledWhenStatusIsNull() {
+        // Decisión documentada: estado null => "PROGRAMADA"
+        CitaMedica c = new CitaMedica("6af7316490f1d08b4673bfa8", "6af730a190f1d08b4673bfb1", "9bc12ef4402ddb157b277c02",
+                "2026-11-27 09:16", "Chequeo mensual", null);
+        assertNotNull(c.getEstado());
+        assertEquals("PROGRAMADA", c.getEstado());
+    }
+
+
+
+
 }
