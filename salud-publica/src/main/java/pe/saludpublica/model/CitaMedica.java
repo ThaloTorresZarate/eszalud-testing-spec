@@ -17,6 +17,9 @@ public class CitaMedica {
             throw new IllegalArgumentException("El identificador del paciente de la cita es obligatorio.");
         }
         this.idPaciente = idPaciente;
+        if (idDoctor == null){
+            throw new IllegalArgumentException("El identificador del doctor en la cita es obligatorio.");
+        }
         this.idDoctor = idDoctor;
         this.idEspecialidad = idEspecialidad;
         this.fechaHora = fechaHora;
