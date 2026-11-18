@@ -37,4 +37,13 @@ public class CitaMedicaTest {
                         "2026-11-26 09:16", "Chequeo mensual", "PROGRAMADA"));
     }
 
+    @Test
+    @DisplayName("Rechazar cita sin identificador de especialidad")
+    void shouldThrowExceptionWhenSpecialtyIdIsNull() {
+        assertThrows(IllegalArgumentException.class, () ->
+                new CitaMedica("6af7316490f1d08b4673bfa8", "6af730a190f1d08b4673bfb1", null,
+                        "2026-11-27 09:16", "Chequeo mensual", "PROGRAMADA"));
+    }
+
+
 }
