@@ -13,6 +13,7 @@ public class CitaMedica {
     }
 
     public CitaMedica(String idPaciente, String idDoctor, String idEspecialidad, String fechaHora, String motivo, String estado) {
+
         this.idPaciente = idPaciente;
         this.idDoctor = idDoctor;
         this.idEspecialidad = idEspecialidad;
