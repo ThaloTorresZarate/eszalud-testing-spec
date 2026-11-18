@@ -13,7 +13,9 @@ public class CitaMedica {
     }
 
     public CitaMedica(String idPaciente, String idDoctor, String idEspecialidad, String fechaHora, String motivo, String estado) {
-
+        if (idPaciente == null){
+            throw new IllegalArgumentException("El identificador del paciente de la cita es obligatorio.");
+        }
         this.idPaciente = idPaciente;
         this.idDoctor = idDoctor;
         this.idEspecialidad = idEspecialidad;

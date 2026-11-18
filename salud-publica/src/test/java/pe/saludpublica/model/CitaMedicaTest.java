@@ -21,7 +21,7 @@ public class CitaMedicaTest {
     }
 
     @Test
-    @DisplayName("Crear cita sin identificador de paciente (null) lanza IllegalArgumentException")
+    @DisplayName("Crear cita sin identificador de paciente")
     void shouldThrowExceptionWhenPatientIdIsNull() {
         assertThrows(IllegalArgumentException.class, () -> {
             new CitaMedica(null, "6af730a190f1d08b4673b", "6af71da3501cca046a166",
