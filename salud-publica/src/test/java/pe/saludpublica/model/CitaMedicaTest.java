@@ -63,6 +63,13 @@ public class CitaMedicaTest {
         assertEquals("PROGRAMADA", c.getEstado());
     }
 
+    @Test
+    @DisplayName("Conservar un estado válido")
+    void shouldPreserveValidState() {
+        CitaMedica c = new CitaMedica("6af7316490f1d08b4673bfa8", "6af730a190f1d08b4673bfb1", "6af71da3501cca046a166",
+                "2026-11-26 09:16", "Control posterior", "ATENDIDA");
+        assertEquals("ATENDIDA", c.getEstado());
+    }
 
 
 
