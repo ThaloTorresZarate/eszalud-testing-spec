@@ -71,6 +71,18 @@ public class CitaMedicaTest {
         assertEquals("ATENDIDA", c.getEstado());
     }
 
+    @Test
+    @DisplayName("Verificar atributos tras construir el objeto")
+    void shouldVerifyAttributesAfterConstruction() {
+        CitaMedica c = new CitaMedica("45678912", "80654321", "9bc12ef4402ddb157b277",
+                "2026-12-03 15:30", "Dolor de cabeza", "CANCELADA");
+        assertEquals("45678912", c.getIdPaciente());
+        assertEquals("80654321", c.getIdDoctor());
+        assertEquals("9bc12ef4402ddb157b277", c.getIdEspecialidad());
+        assertEquals("2026-12-03 15:30", c.getFechaHora());
+        assertEquals("Dolor de cabeza", c.getMotivo());
+        assertEquals("CANCELADA", c.getEstado());
+    }
 
 
 }
