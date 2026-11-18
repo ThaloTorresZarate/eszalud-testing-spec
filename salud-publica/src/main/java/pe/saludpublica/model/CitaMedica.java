@@ -9,6 +9,9 @@ public class CitaMedica {
     private String motivo;
     private String estado;
 
+    public CitaMedica() {
+    }
+
     public CitaMedica(String idPaciente, String idDoctor, String idEspecialidad, String fechaHora, String motivo, String estado) {
         this.idPaciente = idPaciente;
         this.idDoctor = idDoctor;
@@ -19,27 +22,38 @@ public class CitaMedica {
     }
 
     public String getIdPaciente() {
-        return null;
+        return idPaciente;
     }
 
     public String getIdDoctor() {
-        return null;
+        return idDoctor;
     }
 
     public String getIdEspecialidad() {
-        return null;
+        return idEspecialidad;
     }
 
     public String getFechaHora() {
-        return null;
+        return fechaHora;
     }
 
     public String getMotivo() {
-        return null;
+        return motivo;
     }
 
     public String getEstado() {
-        return null;
+        return estado;
     }
 
+    @Override
+    public String toString() {
+        return "CitaMedica{" +
+                "idPaciente='" + idPaciente + '\'' +
+                ", idDoctor='" + idDoctor + '\'' +
+                ", idEspecialidad='" + idEspecialidad + '\'' +
+                ", fechaHora='" + fechaHora + '\'' +
+                ", motivo='" + motivo + '\'' +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }
