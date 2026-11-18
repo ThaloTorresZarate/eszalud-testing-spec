@@ -28,4 +28,13 @@ public class CitaMedicaTest {
                     "2026-11-26 09:16", "Chekeo Mensual", "PROGRAMADA");
         });
     }
+
+    @Test
+    @DisplayName("Rechazar cita sin identificador de doctor")
+    void shouldThrowExceptionWhenDoctorIdIsNull() {
+        assertThrows(IllegalArgumentException.class, () ->
+                new CitaMedica("6af7316490f1d08b4673bfa8", null, "9bc12ef4402ddb157b277c02",
+                        "2026-11-26 09:16", "Chequeo mensual", "PROGRAMADA"));
+    }
+
 }
